@@ -1,14 +1,77 @@
-<section>
-    <h2 class="section-title">Selected Works</h2>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Gallery</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
-    <p class="label-intro">
-        A curated selection of visual work, cover art, and production output from Riqos Productions.
+<nav>
+<div class="title">Visual Archives 001</div>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a class="active" href="gallery.html">Gallery</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+
+<!-- ================= VISUAL ARCHIVES ================= -->
+
+<section>
+    <h2 class="title">Visual Archives</h2>
+
+    <p class="text">
+        A curated archive of studio sessions, music video stills,
+        production environments, and cinematic visuals.
     </p>
 
-    <div class="grid">
-        <div class="media-box">COVER ART / POSTER</div>
-        <div class="media-box">MUSIC VIDEO FRAME</div>
-        <div class="media-box">ARTIST SHOOT</div>
-        <div class="media-box">BRANDING VISUAL</div>
+    <!-- ===== IMAGE GRID ===== -->
+    <div class="gallery-grid">
+
+        <div class="gallery-item">
+            <img src="images/gallery1.jpg" alt="Studio Session">
+        </div>
+
+        <div class="gallery-item">
+            <img src="images/gallery2.jpg" alt="Music Video Shoot">
+        </div>
+
+        <div class="gallery-item">
+            <img src="images/gallery3.jpg" alt="Behind The Scenes">
+        </div>
+
+        <div class="gallery-item">
+            <img src="images/gallery4.jpg" alt="Production Setup">
+        </div>
+
+    </div>
+
+    <!-- ===== VIDEO GRID ===== -->
+    <h2 class="title" style="margin-top:70px;">Video Highlights</h2>
+
+    <div class="video-grid">
+
+        <div class="video-card">
+            <video controls>
+                <source src="videos/gallery-video1.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="video-card">
+            <video controls>
+                <source src="videos/gallery-video2.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="video-card">
+            <video controls>
+                <source src="videos/gallery-video3.mp4" type="video/mp4">
+            </video>
+        </div>
+
     </div>
 </section>
+<footer>© 2026 Riqos Productions</footer>
+</html>

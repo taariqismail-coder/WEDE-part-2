@@ -1,32 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Studio Booking | Riqos Productions</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<nav>
+    <div class="title">Contact the studio</div>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a class="active" href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
 <section>
-    <h2 class="section-title">Book Riqos Productions</h2>
-
-    <p class="label-intro">
-        We only accept serious inquiries from artists, brands, and collaborators.
-        If you're ready to build a sound or visual identity, this is the entry point.
+    <h2 class="title">Studio OS Booking System</h2>
+    <p class="text">
+        Select your service, session type, and get an instant estimated project cost.
+        This system helps structure your booking before we respond.
     </p>
+</section>
 
-    <div class="grid">
-        <div class="card">
-            <b>Music Production</b><br>
-            Custom beats, instrumentals, and full track development.
+<!-- ================= SERVICE SELECT ================= -->
+<section>
+    <h2 class="title">1. Select Service</h2>
+
+    <form id="bookingForm">
+
+        <div class="grid">
+
+            <label class="card">
+                <input type="radio" name="service" value="500">
+                <h3>🎧 Beat Production</h3>
+                <p>Custom beats + exclusive instrumentals</p>
+                <p><b>R500</b></p>
+            </label>
+
+            <label class="card">
+                <input type="radio" name="service" value="1200">
+                <h3>🎙 Studio Recording</h3>
+                <p>Recording + basic engineering</p>
+                <p><b>R1200</b></p>
+            </label>
+
+            <label class="card">
+                <input type="radio" name="service" value="3000">
+                <h3>🎬 Music Video</h3>
+                <p>Filming + editing + concept</p>
+                <p><b>R3000</b></p>
+            </label>
+
+            <label class="card">
+                <input type="radio" name="service" value="8000">
+                <h3>🧠 Full Artist Development</h3>
+                <p>Branding + sound + visuals</p>
+                <p><b>R8000</b></p>
+            </label>
+
         </div>
 
-        <div class="card">
-            <b>Visual Projects</b><br>
-            Music videos, branding visuals, and commercial content.
+        <!-- SESSION TYPE -->
+        <h2 class="title">2. Session Type</h2>
+
+        <div class="grid">
+
+            <label class="card">
+                <input type="radio" name="session" value="0">
+                <h3>Quick (1–2 hrs)</h3>
+                <p>Basic work session</p>
+            </label>
+
+            <label class="card">
+                <input type="radio" name="session" value="300">
+                <h3>Standard (3–5 hrs)</h3>
+                <p>Full recording / production</p>
+            </label>
+
+            <label class="card">
+                <input type="radio" name="session" value="600">
+                <h3>Full Day (6–10 hrs)</h3>
+                <p>Full project build</p>
+            </label>
+
         </div>
 
-        <div class="card">
-            <b>Full Development</b><br>
-            Artist identity + sound + visual direction packages.
-        </div>
-    </div>
+        <!-- DETAILS -->
+        <h2 class="title">3. Project Details</h2>
 
-    <form>
-        <input type="text" placeholder="Artist / Brand Name">
-        <input type="email" placeholder="Email Address">
-        <textarea rows="6" placeholder="Describe your project (sound, vision, goals, references)"></textarea>
-        <button class="btn">Submit Request</button>
+        <input type="text" id="name" placeholder="Artist / Brand Name">
+        <input type="email" id="email" placeholder="Email">
+        <textarea id="details" rows="6" placeholder="Describe your vision..."></textarea>
+
+        <!-- PRICE DISPLAY -->
+        <div class="card">
+            <h3>Estimated Price</h3>
+            <p class="price" id="total">R0</p>
+        </div>
+
+        <!-- BUTTONS -->
+        <button type="button" class="btn" onclick="calculatePrice()">Calculate Price</button>
+        <button type="button" class="btn" onclick="sendWhatsApp()">Send Booking via WhatsApp</button>
+
     </form>
 </section>
+
+
+
+<!-- ================= JS ENGINE ================= -->
+<script>
+function calculatePrice() {
+    let service = document.querySelector('input[name="service"]:checked');
+    let session = document.querySelector('input[name="session"]:checked');
+
+    let total = 0;
+
+    if (service) total += parseInt(service.value);
+    if (session) total += parseInt(session.value);
+
+    document.getElementById("total").innerText = "R" + total;
+}
+
+function sendWhatsApp() {
+    let service = document.querySelector('input[name="service"]:checked');
+    let session = document.querySelector('input[name="session"]:checked');
+    let name = document.getElementById("name").value;
+    let details = document.getElementById("details").value;
+
+    let price = document.getElementById("total").innerText;
+
+    let message =
+`🔥 NEW BOOKING REQUEST
+
+Name: ${name}
+Service: ${service ? service.parentElement.innerText : "Not selected"}
+Session: ${session ? session.parentElement.innerText : "Not selected"}
+
+Project Details:
+${details}
+
+Estimated Price: ${price}`;
+
+    let url = "https://wa.me/27700000000?text=" + encodeURIComponent(message);
+    window.open(url, "_blank");
+}
+</script>
+
+</body>
+<footer>© 2026 Riqos Productions</footer>
+</html>
