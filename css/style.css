@@ -414,3 +414,172 @@ section:nth-child(4) { animation-delay: 0.4s; }
         transform: translateY(0);
     }
 }
+/* ===== UNIFORM ARTIST IMAGES (PRO FIX) ===== */
+
+.artist-card {
+    overflow: hidden;
+}
+.artist-card img {
+    width: 100%;
+    max-height: 320px;
+    height: auto;
+    object-fit: contain;
+    background: #0f0f14;
+    border-radius: 12px;
+    display: block;
+}
+/* ===== UNIFORM GALLERY VIDEOS ===== */
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.video-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 14px;
+    background: #0f0f14;
+}
+
+/* SAME SIZE FOR ALL VIDEOS */
+.video-card video {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+    border-radius: 14px;
+    transition: 0.4s ease;
+}
+
+/* HOVER ZOOM EFFECT (NETFLIX STYLE FEEL) */
+.video-card:hover video {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+.video-card::after {
+    content: "▶";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    color: white;
+    opacity: 0;
+    transition: 0.3s ease;
+    pointer-events: none;
+}
+
+.video-card:hover::after {
+    opacity: 1;
+}
+/* ===== HEADING TYPOGRAPHY ONLY ===== */
+
+h1, h2, h3, .title {
+    font-family: 'Poppins', Arial, sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #e5e7eb;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+h3 {
+    font-size: 20px;
+}
+/* ===== ARTIST PROFILE CLEAN ACCORDION ===== */
+
+.artist-card details {
+    margin-top: 12px;
+}
+
+.artist-card summary {
+    cursor: pointer;
+    padding: 10px 12px;
+    border-radius: 8px;
+    background: rgba(124, 58, 237, 0.15);
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+    list-style: none;
+}
+
+.artist-card summary:hover {
+    background: rgba(124, 58, 237, 0.3);
+}
+
+.artist-card summary::-webkit-details-marker {
+    display: none;
+}
+
+.artist-card details p {
+    margin-top: 12px;
+    font-size: 14px;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+/* ===== SPOTIFY STYLE ARTIST CARDS ===== */
+
+.artist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+/* CARD */
+.spotify-card {
+    background: #111118;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+/* IMAGE */
+.spotify-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+}
+
+/* INFO */
+.spotify-info {
+    padding: 15px;
+}
+
+.spotify-info h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.spotify-info p {
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+/* HOVER EFFECT */
+.spotify-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(124, 58, 237, 0.25);
+}
+
+/* PROFILE DROPDOWN */
+.spotify-info details {
+    margin-top: 10px;
+}
+
+.spotify-info summary {
+    cursor: pointer;
+    font-size: 12px;
+    color: #38BDF8;
+}
