@@ -59,53 +59,48 @@ nav {
     text-transform: uppercase;
 }
 
-/* NAV LINKS */
-nav ul {
-    display: flex;
-    gap: 22px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-/* LINK STYLE */
-nav a {
-    text-decoration: none;
-    color: #E5E7EB;
-    font-size: 13px;
-    letter-spacing: 1px;
-    position: relative;
-    transition: 0.3s ease;
-}
-
-/* HOVER EFFECT (CLEAN + HARD) */
-nav a:hover {
-    color: #38BDF8;
-    transform: translateY(-2px);
-}
-
-/* =========================
-   HARD NAV RESET FIX
-========================= */
+/* ===== RESPONSIVE NAVBAR ===== */
 
 nav {
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
+    width: 100%;
+    background: #0f0f17;
+    padding: 15px 0;
+}
 
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: center !important;
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;              /* THIS MAKES IT WRAP */
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
 
-    padding: 18px 6% !important;
+nav ul li {
+    flex: 1 1 auto;               /* allows shrinking */
+    text-align: center;
+}
 
-    background: rgba(5, 6, 10, 0.85) !important;
-    backdrop-filter: blur(20px);
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 10px 14px;
+    display: block;
+    transition: 0.3s ease;
+    font-size: clamp(13px, 2vw, 16px); /* auto shrink font */
+}
 
-    border-bottom: 1px solid rgba(124, 58, 237, 0.25);
+nav ul li a:hover {
+    color: #a855f7;
+}
 
-    z-index: 9999 !important;
+/* ACTIVE LINK */
+nav ul li a.active {
+    border-bottom: 2px solid #a855f7;
 }
 
 /* logo fix */
@@ -122,7 +117,7 @@ nav ul {
     list-style: none;
 }
 
-/* link fix (THIS removes BLUE ISSUE) */
+/* link fix */
 nav a {
     color: #E5E7EB !important;
     text-decoration: none;
