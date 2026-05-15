@@ -1,9 +1,14 @@
 RIQOS PRODUCTION WEBSITE
 
 Developer: Taariq Ismail
+
 Qualification: Bachelor of Business Systems In Information Technology
+
 Project Type: Multi-page Responsive Website
+
 Languages Used: HTML5 & External CSS3
+
+
 
 1. Project Overview
 This project is a redesigned and improved version of my original Riqos Production website. The first version was built using HTML only. In this upgraded version, I implemented external CSS, responsive design principles, and improved layout structure to create a more professional and scalable website.
