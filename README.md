@@ -6,7 +6,7 @@ Qualification: Bachelor of Business Systems In Information Technology
 
 Project Type: Multi-page Responsive Website
 
-Languages Used: HTML5 & External CSS3
+Languages Used: HTML5 & External CSS3 & JavaScript
 
 
 
@@ -37,11 +37,15 @@ Video Production
 Artist Development
 The page includes dedicated sections for embedded videos and structured content blocks.
 
+
+
 2.4 Gallery (gallery.html)
 The gallery page displays:
 Four images
 Three video elements
 The layout uses CSS Grid and adjusts responsively depending on screen size.
+
+
 
 2.5 Contact (contact.html)
 The contact page includes a structured inquiry form and detailed contact information. The layout was designed to resemble a professional studio dashboard interface.
@@ -101,6 +105,9 @@ The project meets the required web development standards for a first-year Bachel
 
 References:
 Duckett, J., 2011. HTML and CSS: Design and Build Websites. Indianapolis: John Wiley & Sons.
+
 Mozilla Developer Network (MDN), 2024. CSS: Cascading Style Sheets. Available at: https://developer.mozilla.org/en-US/docs/Web/CSS⁠� [Accessed 15 May 2026].
+
 W3Schools, 2024. CSS Responsive Web Design. Available at: https://www.w3schools.com/css/css_rwd_intro.asp⁠� [Accessed 15 May 2026].
+
 W3Schools, 2024. HTML5 Semantic Elements. Available at: https://www.w3schools.com/html/html5_semantic_elements.asp⁠� [Accessed 15 May 2026].
